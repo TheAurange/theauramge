@@ -1,0 +1,97 @@
+body {
+	display: grid;
+	grid-template-columns: 30px calc(100% - 30px);
+	grid-template-rows: auto 20px;
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+body:has(nav#primary > ul > li:hover) {
+	grid-template-columns: 90px 100%;
+}
+
+nav#primary {
+	grid-column: 1;
+	grid-row-start: 1;
+	grid-row-end: span 2;
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+
+nav#primary > ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+nav#primary > ul > li {
+	line-height: 20px;
+	height: 30px;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+
+nav#primary > ul > li#primary-selected {
+	background-color: rgb(128, 128, 128);
+}
+
+nav#primary > ul > li:hover, nav#primary > ul > li#primary-selected:hover {
+	background-color: rgb(76, 76, 76);
+}
+
+nav#primary > ul > li > span.primary-text {
+	display: none;
+}
+
+nav#primary > ul:has(> li:hover) span.primary-text {
+	display: inline;
+}
+
+section.main, section#footer {
+	grid-column: 2;
+}
+
+section.main {
+	grid-row: 1;
+	background-color: rgb(254, 251, 234);
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+section.main#projects {
+	display: none;
+}
+
+section.main > div.main-item {
+	background-color: rgb(218, 165, 32);
+	padding: 10px;
+	border-radius: 15px;
+	box-sizing: border-box;
+}
+
+section.main > div.main-item:not(:last-of-type) {
+	margin-bottom: 10px;
+}
+
+section.main > div.main-item > span.main-item-title {
+	font-weight: bold;
+}
+
+section.main > div.main-item > span.main-item-meta {
+	font-style: italic;
+}
+
+section.main > div.main-item button{
+	background-color: rgba(190, 218, 247, 1);
+	border-color: rgba(22, 102, 186, 1);
+	border-width: 2px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+section#footer {
+	grid-row: 2;
+	background-color: rgb(210, 180, 140);
+	line-height: 20px;
+	text-align: center;
+}
