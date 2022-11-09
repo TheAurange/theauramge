@@ -10,4 +10,4 @@ document.querySelectorAll("nav#primary > ul > li").forEach(e => {
 	});
 });
 
-document.querySelector("section#footer").innerText = document.querySelector("section#footer").innerText.replace(" Aurange", "") + (new Date().getFullYear() > 2022 ? " - " + new Date().getFullYear() + " Aurange" : " Aurange");
+document.querySelector("section#footer").innerText += new Date().getFullYear() > 2022 ? " - " + new Date().getFullYear() + " Aurange" : " Aurange";
