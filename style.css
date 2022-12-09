@@ -96,3 +96,7 @@ section#footer {
 	line-height: 20px;
 	text-align: center;
 }
+
+section#footer a {
+	text-color: rgba(255, 255, 255, 1.0);
+}
