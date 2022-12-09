@@ -58,7 +58,7 @@ section.main {
 	box-sizing: border-box;
 }
 
-section.main#projects {
+section.main:not(#news) {
 	display: none;
 }
 
