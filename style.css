@@ -7,7 +7,7 @@ body {
 }
 
 body:has(nav#primary > ul > li:hover) {
-	grid-template-columns: 90px 100%;
+	grid-template-columns: 110px 100%;
 }
 
 nav#primary {
