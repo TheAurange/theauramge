@@ -10,4 +10,7 @@ document.querySelectorAll("nav#primary > ul > li").forEach(e => {
 	});
 });
 
-document.querySelector("section#footer").innerHTML += new Date().getFullYear() > 2022 ? " - " + new Date().getFullYear() + " <a href=\"https://twitter.com/True_Aurange/\" target=\"_blank\">Aurange</a>" : " <a href=\"https://twitter.com/True_Aurange/\" target=\"_blank\">Aurange</a>";
+let y = new Date().getFullYear();
+
+if(y > 2022) document.querySelector("section#footer").innerText += " - " + y + " ";
+document.querySelector("section#footer").innerHTML += "<a href=\"https://twitter.com/True_Aurange/\" target=\"_blank\">Aurange</a>";
