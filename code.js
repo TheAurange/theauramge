@@ -76,7 +76,9 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 				tempElem.classList.add("main-item");
 
 				tempTitle.classList.add("main-item-title");
-				tempTitle.innerText = e2[0].replace(/-/g, " ").replace(/(^\w{1})|(\s{1}\w{1})/g, l => l.toUpperCase()).replace("And", "&");
+				
+				if(e2[0] !== "pokeclicker-improve-ui") tempTitle.innerText = e2[0].replace(/-/g, " ").replace(/(^\w{1})|(\s{1}\w{1})/g, l => l.toUpperCase()).replace("And", "&");
+				else tempTitle.innerText = "PokeClicker Improve UI";
 
 				tempA.href = e2[2];
 				tempA.target = "_blank";
