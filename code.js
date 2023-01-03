@@ -31,6 +31,8 @@ fetch("https://raw.githubusercontent.com/TheAurange/theaurange.github.io/main/ne
 		tempElem.appendChild(tempMeta);
 		tempElem.appendChild(tempBr);
 		tempElem.appendChild(document.createTextNode(e.details));
+
+		document.querySelector("#news").appendChild(tempElem);
 	});
 });
 
