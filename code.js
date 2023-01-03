@@ -42,7 +42,9 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 				tempElem.classList.add("main-item");
 
 				tempTitle.classList.add("main-item-title");
-				tempTitle.innerText = e2[0].replace(/-/g, " ").replace(/(^\w{1})|(\s{1}\w{1})/g, l => l.toUpperCase()).replace("And", "&");
+				
+				if(e2[0] !== "ip-address-as-color") tempTitle.innerText = e2[0].replace(/-/g, " ").replace(/(^\w{1})|(\s{1}\w{1})/g, l => l.toUpperCase()).replace("And", "&");
+				else tempTitle.innerText = "IP Address As Color";
 
 				tempA.href = e2[2];
 				tempA.target = "_blank";
