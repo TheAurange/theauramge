@@ -26,8 +26,6 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 			    tempTitle = document.createElement("span"),
 			    tempBr1 = document.createElement("br"),
 			    tempBr2 = document.createElement("br"),
-			    tempBr3 = document.createElement("br"),
-			    tempBr4 = document.createElement("br"),
 			    tempA = document.createElement("a"),
 			    tempButton = document.createElement("button");
 
@@ -44,11 +42,9 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 			tempA.appendChild(tempButton);
 
 			tempElem.appendChild(tempTitle);
+			tempElem.appendChild(document.createTextNode(e.description));
 			tempElem.appendChild(tempBr1);
 			tempElem.appendChild(tempBr2);
-			tempElem.appendChild(document.createTextNode(e.description));
-			tempElem.appendChild(tempBr3);
-			tempElem.appendChild(tempBr4);
 			tempElem.appendChild(tempA);
 
             		if(e.topics.indexOf("userscript") === -1) document.querySelector("#projects").appendChild(tempElem);
