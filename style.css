@@ -75,6 +75,10 @@ section.main > div.main-item:not(:last-of-type) {
 	margin-bottom: 10px;
 }
 
+section.main > div.main-item > span {
+	display: block;
+}
+
 section.main > div.main-item > span.main-item-title {
 	font-weight: bold;
 }
