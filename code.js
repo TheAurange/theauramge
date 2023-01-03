@@ -18,6 +18,8 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 		"Accept": "application/vnd.github.v3+json"
 	}
 }).then(res => res.json()).then(data => {
+	let abbreviations = ["IP", "UI"];
+
 	data.forEach(e => {
         	if(e.name !== "theaurange.github.io"){
 			let tempElem = document.createElement("div"),
@@ -32,7 +34,7 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 			tempElem.classList.add("main-item");
 
 			tempTitle.classList.add("main-item-title");
-			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("And", "&").replace(/(?:^|\s)(Ip|Ui)(?:\s|$)/g, w => w.toUpperCase()).replace("Pokeclicker", "PokeClicker");
+			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("And", "&").replace(new RegExp(`(?:^|\\s)(${abbreviations.join("|")})(?:\\s|$)`, "gi"), w => w.toUpperCase()).replace("Pokeclicker", "PokeClicker");
 
 			tempA.href = e.html_url + "/";
 			tempA.target = "_blank";
