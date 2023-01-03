@@ -12,6 +12,28 @@ document.querySelectorAll("nav#primary > ul > li").forEach(e => {
 	});
 });
 
+fetch("https://raw.githubusercontent.com/TheAurange/theaurange.github.io/main/news.json").then(res => res.json()).then(data => {
+	data.posts.forEach(e => {
+		let tempElem = document.createElement("div"),
+		    tempTitle = document.createElement("span"),
+		    tempMeta = document.createElement("span"),
+		    tempBr = document.createElement("br");
+
+		tempElem.classList.add("main-item");
+
+		tempTitle.classList.add("main-item-title");
+		tempTitle.innerText = e.title;
+
+		tempMeta.classList.add("main-item-meta");
+		tempMeta.innerText = e.meta;
+
+		tempElem.appendChild(tempTitle);
+		tempElem.appendChild(tempMeta);
+		tempElem.appendChild(tempBr);
+		tempElem.appendChild(document.createTextNode(e.details));
+	});
+});
+
 fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=asc", {
 	method: "GET",
 	headers: {
