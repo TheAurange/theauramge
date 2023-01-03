@@ -1,3 +1,5 @@
+/* Created by Aurange */
+
 body {
 	display: grid;
 	grid-template-columns: 30px calc(100% - 30px);
