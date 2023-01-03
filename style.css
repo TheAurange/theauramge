@@ -57,6 +57,7 @@ section.main {
 	background-color: rgb(254, 251, 234);
 	padding: 10px;
 	box-sizing: border-box;
+	overflow-y: scroll;
 }
 
 section.main:not(#news) {
