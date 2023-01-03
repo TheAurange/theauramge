@@ -1,6 +1,11 @@
 {
 	"posts": [
 		{
+			"title": "News Page Now Is Also Seperated From The HTML",
+			"meta": "January 2, 2022 11:40PM CST",
+			"details": "Following suit (kind of) with the other two pages the news page is also no longer updated directly from the HTML file."
+		},
+		{
 			"title": "Projects & Userscripts Page Upgrade + Better Page Layout",
 			"meta": "January 2, 2022 8:04PM CST",
 			"details": "As the title lays out pretty clearly. I have upgraded the projects and userscripts pages to automatically update whenever I upload or create or whatever a new one automatically. I also made it so that should a section ever have too much to fit it no longer scrolls the whole page and only the content. An oversight I didn't realize was there as I didn't properly test it and it only came to my attention now with testing out the upgraded sections for the projects and userscripts pages."
