@@ -1,3 +1,7 @@
+//Created by Aurange
+
+"use strict";
+
 let y = new Date().getFullYear();
 
 document.querySelectorAll("nav#primary > ul > li").forEach(e => {
