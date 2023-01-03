@@ -14,7 +14,7 @@ document.querySelectorAll("nav#primary > ul > li").forEach(e => {
 	});
 });
 
-await fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=asc", {
+fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=asc", {
 	method: "GET",
 	headers: {
 		"Accept": "application/vnd.github.v3+json"
