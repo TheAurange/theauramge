@@ -83,4 +83,4 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 	});
 });
 
-if(y > 2022) document.querySelector("section#footerCurrent").innerText += " - " + y;
+if(y > 2022) document.querySelector("span#footerCurrent").innerText += " - " + y;
