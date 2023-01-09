@@ -84,5 +84,3 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 });
 
 if(y > 2022) document.querySelector("section#footer").innerText += " - " + y;
-
-document.querySelector("section#footer").innerHTML += " <a href=\"https://twitter.com/True_Aurange/with_replies/\" target=\"_blank\">Aurange</a>";
