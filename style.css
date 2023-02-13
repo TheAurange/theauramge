@@ -6,6 +6,8 @@ body {
 	grid-template-rows: auto 20px;
 	margin: 0px;
 	overflow-x: hidden;
+	font-family: sans-serif;
+	font-size: smaller;
 }
 
 body:has(nav#primary > ul > li:hover) {
