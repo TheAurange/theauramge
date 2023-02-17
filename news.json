@@ -1,23 +1,28 @@
 {
 	"posts": [
 		{
+			"title": "Small Changes",
+			"meta": "February 17, 2023 7:38PM UTC",
+			"details": "The font is now sans-serif which I think looks nicer, and projects will now indicate if they are archived or not."
+		},
+		{
 			"title": "News Page Now Is Also Seperated From The HTML",
-			"meta": "January 2, 2022 11:40PM CST",
+			"meta": "January 2, 2022 5:40AM UTC",
 			"details": "Following suit (kind of) with the other two pages the news page is also no longer updated directly from the HTML file."
 		},
 		{
 			"title": "Projects & Userscripts Page Upgrade + Better Page Layout",
-			"meta": "January 2, 2022 8:04PM CST",
+			"meta": "January 2, 2022 2:04AM UTC",
 			"details": "As the title lays out pretty clearly. I have upgraded the projects and userscripts pages to automatically update whenever I upload or create or whatever a new one automatically. I also made it so that should a section ever have too much to fit it no longer scrolls the whole page and only the content. An oversight I didn't realize was there as I didn't properly test it and it only came to my attention now with testing out the upgraded sections for the projects and userscripts pages."
 		},
 		{
 			"title": "New Userscripts Page",
-			"meta": "December 8, 2022 6:32PM CST",
+			"meta": "December 8, 2022 12:32AM UTC",
 			"details": "Added new page for userscripts I have developed."
 		},
 		{
 			"title": "Initial Design & Content Up",
-			"meta": "November 8, 2022 2:55AM CST",
+			"meta": "November 8, 2022 8:55AM UTC",
 			"details": "The new homepage has been put up."
 		}
 	]
