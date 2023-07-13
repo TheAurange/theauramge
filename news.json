@@ -1,6 +1,11 @@
 {
 	"posts": [
 		{
+			"title": "Updated "Grab Palette"",
+			"meta": "2023/7/13 @ 19:12 UTC",
+			"details": "I changed my "Grab Palette" script to be a little more efficient."
+		},
+		{
 			"title": "Small Changes",
 			"meta": "2023/2/17 @ 19:38 UTC",
 			"details": "The font is now sans-serif which I think looks nicer, and projects will now indicate if they are archived or not."
