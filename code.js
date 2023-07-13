@@ -64,9 +64,7 @@ fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=a
 			tempElem.classList.add("main-item");
 
 			tempTitle.classList.add("main-item-title");
-			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("And", "&").replace(new RegExp(`(?:^|\\s)(${abbreviations.join("|")})(?:\\s|$)`, "gi"), w => w.toUpperCase()).replace("Pokeclicker", "PokeClicker");
-
-			if(e.archived === true) tempTitle.innerText += " (Archived)";
+			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("And", "&").replace(new RegExp(`(?:^|\\s)(${abbreviations.join("|")})(?:\\s|$)`, "gi"), w => w.toUpperCase()).replace("Livechart", "LiveChart");
 
 			tempA.href = e.html_url + "/";
 			tempA.target = "_blank";
