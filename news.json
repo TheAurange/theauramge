@@ -1,6 +1,11 @@
 {
 	"posts": [
 		{
+			"title": "Updated Projects/UserScripts List Code",
+			"meta": "2023/7/13 @ 20:05 UTC",
+			"details": "I removed the archive check as I am not keeping anything in an archive. I also updated the capitalization fixing stuff."
+		},
+		{
 			"title": "News Script Updated",
 			"meta": "2023/7/13 @ 19:52 UTC",
 			"details": "I have updated the news script to allow me to include double quotes in the posts while also using my automatic formatter."
