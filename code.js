@@ -21,20 +21,23 @@ fetch("https://raw.githubusercontent.com/TheAurange/theaurange.github.io/main/ne
 		let tempElem = document.createElement("div"),
 		    tempTitle = document.createElement("span"),
 		    tempMeta = document.createElement("span"),
-		    tempBr = document.createElement("br");
+		    tempBr = document.createElement("br"),
+		    tempDetails = document.createElement("span");
 
 		tempElem.classList.add("main-item");
 
 		tempTitle.classList.add("main-item-title");
-		tempTitle.innerText = e.title;
+		tempTitle.innerHTML = e.title;
 
 		tempMeta.classList.add("main-item-meta");
 		tempMeta.innerText = e.meta;
 
+		tempDetails.innerHTML = e.details;
+
 		tempElem.appendChild(tempTitle);
 		tempElem.appendChild(tempMeta);
 		tempElem.appendChild(tempBr);
-		tempElem.appendChild(document.createTextNode(e.details));
+		tempElem.appendChild(tempDetails);
 
 		document.querySelector("#news").appendChild(tempElem);
 	});
