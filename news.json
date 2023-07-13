@@ -1,6 +1,11 @@
 {
 	"posts": [
 		{
+			"title": "News Script Updated",
+			"meta": "2023/7/13 @ 19:52 UTC",
+			"details": "I have updated the news script to allow me to include double quotes in the posts while also using my automatic formatter."
+		},
+		{
 			"title": "Updated &quot;Grab Palette&quot;",
 			"meta": "2023/7/13 @ 19:12 UTC",
 			"details": "I changed my &quot;Grab Palette&quot; script to be a little more efficient."
