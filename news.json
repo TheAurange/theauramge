@@ -1,6 +1,11 @@
 {
 	"posts": [
 		{
+			"title": "Updated &quot;Grab Palette&quot; Again",
+			"meta": "2023/7/13 @ 22:21 UTC",
+			"details": "I have improved the sorting for the &quot;Grab Palette&quot; project. Still not perfect but it is definitely better."
+		},
+		{
 			"title": "Updated Projects/UserScripts List Code",
 			"meta": "2023/7/13 @ 20:05 UTC",
 			"details": "I removed the archive check as I am not keeping anything in an archive. I also updated the capitalization fixing stuff."
