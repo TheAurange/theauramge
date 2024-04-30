@@ -18,13 +18,10 @@ document.querySelectorAll("nav#primary > ul > li").forEach(e => {
 
 fetch("https://raw.githubusercontent.com/TheAurange/theaurange.github.io/main/news.json").then(res => res.json()).then(data => {
 	data.posts.forEach(e => {
-		let tempElem = document.createElement("div"),
-		    tempTitle = document.createElement("span"),
+		let tempTitle = document.createElement("span"),
 		    tempMeta = document.createElement("span"),
-		    tempBr = document.createElement("br"),
-		    tempDetails = document.createElement("span");
-
-		tempElem.classList.add("main-item");
+		    tempDetails = document.createElement("span"),
+		    tempElem = document.createElement("div");
 
 		tempTitle.classList.add("main-item-title");
 		tempTitle.innerHTML = e.title;
@@ -34,7 +31,8 @@ fetch("https://raw.githubusercontent.com/TheAurange/theaurange.github.io/main/ne
 
 		tempDetails.innerHTML = e.details;
 
-		tempElem.append(tempTitle, tempMeta, tempBr, tempDetails);
+		tempElem.classList.add("main-item");
+		tempElem.append(tempTitle, tempMeta, document.createElement("br"), tempDetails);
 
 		document.querySelector("#news").append(tempElem);
 	});
@@ -50,27 +48,22 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 
 	data.forEach(e => {
         	if(e.name !== "theaurange.github.io"){
-			let tempElem = document.createElement("div"),
-			    tempTitle = document.createElement("span"),
-			    tempBr1 = document.createElement("br"),
-			    tempBr2 = document.createElement("br"),
-			    tempBr3 = document.createElement("br"),
+			let tempTitle = document.createElement("span"),
+			    tempButton = document.createElement("button"),
 			    tempA = document.createElement("a"),
-			    tempButton = document.createElement("button");
-
-			tempElem.classList.add("main-item");
+			    tempElem = document.createElement("div");
 
 			tempTitle.classList.add("main-item-title");
 			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace(new RegExp(`(?:^|\\s)(${abbreviations.join("|")})(?:\\s|$)`, "gi"), w => w.toUpperCase()).replace("Livechart", "LiveChart").replace("Gmail", "GMail");
 
-			tempA.href = e.html_url + "/";
-			tempA.target = "_blank";
-
 			tempButton.innerText = "Repo";
 
+			tempA.href = e.html_url + "/";
+			tempA.target = "_blank";
 			tempA.append(tempButton);
 
-			tempElem.append(tempTitle, tempBr1, e.description, tempBr2, tempBr3, tempA);
+			tempElem.classList.add("main-item");
+			tempElem.append(tempTitle, document.createElement("br"), e.description, document.createElement("br"), document.createElement("br"), tempA);
 
             		if(e.topics.indexOf("userscript") === -1) document.querySelector("#projects").append(tempElem);
             		else document.querySelector("#userscripts").append(tempElem);
