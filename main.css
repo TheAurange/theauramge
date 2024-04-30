@@ -59,7 +59,7 @@ section#mainWrap > section#projects > section.itemWrap, section#mainWrap > secti
 section#mainWrap > section#projects > section.itemWrap > div.item, section#mainWrap > section#userscripts > section.itemWrap > div.item {
 	background-color: rgb(254, 251, 234);
 	width: 100%;
-	height: 200px;
+	height: 220px;
 	box-sizing: border-box;
 	border-radius: 20px;
 	padding: 20px;
