@@ -41,7 +41,7 @@ section#mainWrap > section#projects > div.title, section#mainWrap > section#proj
 }
 
 section#mainWrap > section#projects > div.title, section#mainWrap > section#userscripts > div.title {
-	background-color: rgb(254, 251, 234);
+	background-color: rgb(197, 197, 197);
 	grid-row: 2;
 	box-sizing: border-box; 
 	border-radius: 20px;
