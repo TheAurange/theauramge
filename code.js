@@ -36,7 +36,7 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 			tempElem.append(tempTitle, document.createElement("br"), document.createElement("br"), e.description, document.createElement("br"), document.createElement("br"), tempA);
 
             		if(e.topics.indexOf("userscript") === -1) document.querySelector("#projects > .itemWrap").append(tempElem);
-            		else document.querySelector("#userscriptss > .itemWrap").append(tempElem);
+            		else document.querySelector("#userscripts > .itemWrap").append(tempElem);
         	}
 	});
 });
