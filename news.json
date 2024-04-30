@@ -1,48 +1,53 @@
 {
 	"posts": [
 		{
+			"title": "Updated Data Loading Code",
+			"meta": "April 29th, 2024 @ 22:16 UTC",
+			"details": "I've made some small changes to reduce the amount of lines the code uses. I also decided to let the projects and userscripts be sorted alphabetically. With the change to the Reddit userscript I no longer needed to change the word &quot;and&quot; to an ampersand. I also have it changing Gmail to GMail because that's how I prefer to stylize it even if Gmail is the correct way."
+		}
+		{
 			"title": "Updated &quot;Grab Palette&quot; Again",
-			"meta": "2023/7/13 @ 22:21 UTC",
+			"meta": "July 13th, 2023 @ 22:21 UTC",
 			"details": "I have improved the sorting for the &quot;Grab Palette&quot; project. Still not perfect but it is definitely better."
 		},
 		{
 			"title": "Updated Projects/UserScripts List Code",
-			"meta": "2023/7/13 @ 20:05 UTC",
+			"meta": "July 13th, 2023 @ 20:05 UTC",
 			"details": "I removed the archive check as I am not keeping anything in an archive. I also updated the capitalization fixing stuff."
 		},
 		{
 			"title": "News Script Updated",
-			"meta": "2023/7/13 @ 19:52 UTC",
+			"meta": "July 13th, 2023 @ 19:52 UTC",
 			"details": "I have updated the news script to allow me to include double quotes in the posts while also using my automatic formatter."
 		},
 		{
 			"title": "Updated &quot;Grab Palette&quot;",
-			"meta": "2023/7/13 @ 19:12 UTC",
+			"meta": "July 13th, 2023 @ 19:12 UTC",
 			"details": "I changed my &quot;Grab Palette&quot; script to be a little more efficient."
 		},
 		{
 			"title": "Small Changes",
-			"meta": "2023/2/17 @ 19:38 UTC",
+			"meta": "February 17th, 2023 @ 19:38 UTC",
 			"details": "The font is now sans-serif which I think looks nicer, and projects will now indicate if they are archived or not."
 		},
 		{
 			"title": "News Page Now Is Also Seperated From The HTML",
-			"meta": "2022/1/3 @ 5:40 UTC",
+			"meta": "January 3rd, 2023 @ 5:40 UTC",
 			"details": "Following suit (kind of) with the other two pages the news page is also no longer updated directly from the HTML file."
 		},
 		{
 			"title": "Projects & Userscripts Page Upgrade + Better Page Layout",
-			"meta": "2022/1/3 @ 2:04 UTC",
+			"meta": "January 3rd, 2023 @ 2:04 UTC",
 			"details": "As the title lays out pretty clearly. I have upgraded the projects and userscripts pages to automatically update whenever I upload or create or whatever a new one automatically. I also made it so that should a section ever have too much to fit it no longer scrolls the whole page and only the content. An oversight I didn't realize was there as I didn't properly test it and it only came to my attention now with testing out the upgraded sections for the projects and userscripts pages."
 		},
 		{
 			"title": "New Userscripts Page",
-			"meta": "2022/12/9 @ 0:32 UTC",
+			"meta": "December 9th, 2022 @ 0:32 UTC",
 			"details": "Added new page for userscripts I have developed."
 		},
 		{
 			"title": "Initial Design & Content Up",
-			"meta": "2022/11/8 @ 8:55 UTC",
+			"meta": "November 8th, 2022 @ 8:55 UTC",
 			"details": "The new homepage has been put up."
 		}
 	]
