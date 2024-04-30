@@ -2,7 +2,7 @@
 
 "use strict";
 
-let y = new Date().getFullYear();
+document.querySelector("span#footerCurrent").innerText += ` - ${new Date().getFullYear()}`;
 
 document.querySelectorAll("nav#primary > ul > li").forEach(e => {
 	e.addEventListener("click", function(evt){
@@ -34,12 +34,9 @@ fetch("https://raw.githubusercontent.com/TheAurange/theaurange.github.io/main/ne
 
 		tempDetails.innerHTML = e.details;
 
-		tempElem.appendChild(tempTitle);
-		tempElem.appendChild(tempMeta);
-		tempElem.appendChild(tempBr);
-		tempElem.appendChild(tempDetails);
+		tempElem.append(tempTitle, tempMeta, tempBr, tempDetails);
 
-		document.querySelector("#news").appendChild(tempElem);
+		document.querySelector("#news").append(tempElem);
 	});
 });
 
@@ -64,26 +61,19 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 			tempElem.classList.add("main-item");
 
 			tempTitle.classList.add("main-item-title");
-			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("And", "&").replace(new RegExp(`(?:^|\\s)(${abbreviations.join("|")})(?:\\s|$)`, "gi"), w => w.toUpperCase()).replace("Livechart", "LiveChart");
+			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace(new RegExp(`(?:^|\\s)(${abbreviations.join("|")})(?:\\s|$)`, "gi"), w => w.toUpperCase()).replace("Livechart", "LiveChart").replace("Gmail", "GMail");
 
 			tempA.href = e.html_url + "/";
 			tempA.target = "_blank";
 
 			tempButton.innerText = "Repo";
 
-			tempA.appendChild(tempButton);
+			tempA.append(tempButton);
 
-			tempElem.appendChild(tempTitle);
-			tempElem.appendChild(tempBr1);
-			tempElem.appendChild(document.createTextNode(e.description));
-			tempElem.appendChild(tempBr2);
-			tempElem.appendChild(tempBr3);
-			tempElem.appendChild(tempA);
+			tempElem.append(tempTitle, tempBr1, e.description, tempBr2, tempBr3, tempA);
 
-            		if(e.topics.indexOf("userscript") === -1) document.querySelector("#projects").appendChild(tempElem);
-            		else document.querySelector("#userscripts").appendChild(tempElem);
+            		if(e.topics.indexOf("userscript") === -1) document.querySelector("#projects").append(tempElem);
+            		else document.querySelector("#userscripts").append(tempElem);
         	}
 	});
 });
-
-if(y > 2022) document.querySelector("span#footerCurrent").innerText += " - " + y;
