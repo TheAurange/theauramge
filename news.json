@@ -4,7 +4,7 @@
 			"title": "Updated Data Loading Code",
 			"meta": "April 29th, 2024 @ 22:16 UTC",
 			"details": "I've made some small changes to reduce the amount of lines the code uses. I also decided to let the projects and userscripts be sorted alphabetically. With the change to the Reddit userscript I no longer needed to change the word &quot;and&quot; to an ampersand. I also have it changing Gmail to GMail because that's how I prefer to stylize it even if Gmail is the correct way."
-		}
+		},
 		{
 			"title": "Updated &quot;Grab Palette&quot; Again",
 			"meta": "July 13th, 2023 @ 22:21 UTC",
