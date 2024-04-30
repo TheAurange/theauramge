@@ -43,7 +43,7 @@ fetch("https://raw.githubusercontent.com/TheAurange/theaurange.github.io/main/ne
 	});
 });
 
-fetch("https://api.github.com/users/TheAurange/repos?sort=created_at&direction=asc", {
+fetch("https://api.github.com/users/TheAurange/repos", {
 	method: "GET",
 	headers: {
 		"Accept": "application/vnd.github.v3+json"
