@@ -18,12 +18,12 @@ section#mainWrap {
 	grid-template-rows: 20px 810px 20px 30px 20px;
 }
 
-section#mainWrap > section#projects, section#mainWrap > section#userscripts, footer {
+section#mainWrap > :is(section#projects, section#userscripts, footer) {
 	background-color: rgb(218, 165, 32);
 	border-radius: 20px;
 }
 
-section#mainWrap > section#projects, section#mainWrap > section#userscripts {
+section#mainWrap > :is(section#projects, section#userscripts) {
 	display: grid;
 	grid-row: 2;
 	grid-template-columns: 10px 400px 10px;
@@ -38,11 +38,11 @@ section#mainWrap > section#userscripts {
 	grid-column: 4;
 }
 
-section#mainWrap > section#projects > div.title, section#mainWrap > section#projects > section.itemWrap, section#mainWrap > section#userscripts > div.title, section#mainWrap > section#userscripts > section.itemWrap {
+section#mainWrap > :is(section#projects, section#userscripts) > :is(div.title, section.itemWrap) {
 	grid-column: 2;
 }
 
-section#mainWrap > section#projects > div.title, section#mainWrap > section#userscripts > div.title {
+section#mainWrap > :is(section#projects, section#userscripts) > div.title {
 	background-color: rgb(197, 197, 197);
 	grid-row: 2;
 	box-sizing: border-box; 
@@ -53,12 +53,12 @@ section#mainWrap > section#projects > div.title, section#mainWrap > section#user
 	font-weight: bold;
 }
 
-section#mainWrap > section#projects > section.itemWrap, section#mainWrap > section#userscripts > section.itemWrap {
+section#mainWrap > :is(section#projects, section#userscripts) > section.itemWrap {
 	grid-row: 4;
 	overflow-y: auto;
 }
 
-section#mainWrap > section#projects > section.itemWrap > div.item, section#mainWrap > section#userscripts > section.itemWrap > div.item {
+section#mainWrap > :is(section#projects, section#userscripts) > section.itemWrap > div.item {
 	background-color: rgb(254, 251, 234);
 	width: 100%;
 	height: 220px;
@@ -67,15 +67,15 @@ section#mainWrap > section#projects > section.itemWrap > div.item, section#mainW
 	padding: 20px;
 }
 
-section#mainWrap > section#projects > section.itemWrap > div.item:not(:last-of-type),  section#mainWrap > section#userscripts > section.itemWrap > div.item:not(:last-of-type) {
+section#mainWrap > :is(section#projects, section#userscripts) > section.itemWrap > div.item:not(:last-of-type) {
 	margin-bottom: 5px;
 }
 
-section#mainWrap > section#projects > section.itemWrap > div.item > span.itemTitle, section#mainWrap > section#userscripts > section.itemWrap > div.item > span.itemTitle {
+section#mainWrap > :is(section#projects, section#userscripts) > section.itemWrap > div.item > span.itemTitle {
 	font-style: italic;
 }
 
-section#mainWrap > section#projects > section.itemWrap > div.item > a > button, section#mainWrap > section#userscripts > section.itemWrap > div.item > a > button {
+section#mainWrap > :is(section#projects, section#userscripts) > section.itemWrap > div.item > a > button {
 	background-color: rgba(190, 218, 247, 1);
 	border-color: rgba(22, 102, 186, 1);
 	border-width: 2px;
@@ -83,7 +83,7 @@ section#mainWrap > section#projects > section.itemWrap > div.item > a > button, 
 	cursor: pointer;
 }
 
-footer {
+section#mainWrap > footer {
 	grid-column: 2 / span 3;
 	grid-row: 4;
 	box-sizing: border-box; 
