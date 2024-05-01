@@ -76,8 +76,8 @@ section#mainWrap > :is(section#projects, section#userscripts) > section.itemWrap
 }
 
 section#mainWrap > :is(section#projects, section#userscripts) > section.itemWrap > div.item > a > button {
-	background-color: rgba(190, 218, 247, 1);
-	border-color: rgba(22, 102, 186, 1);
+	background-color: rgb(190, 218, 247);
+	border-color: rgb(22, 102, 186);
 	border-width: 2px;
 	border-radius: 10px;
 	cursor: pointer;
