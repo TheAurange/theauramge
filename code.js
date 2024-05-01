@@ -17,7 +17,7 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 	let abbreviations = ["IP", "UI"];
 
 	data.forEach(e => {
-        	if(e.name !== "theaurange.github.io"){
+        	if(!e.name.match(/theaurange/i)){
 			let tempTitle = document.createElement("span"),
 			    tempButton = document.createElement("button"),
 			    tempA = document.createElement("a"),
