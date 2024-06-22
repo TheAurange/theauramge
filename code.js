@@ -17,7 +17,7 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 	let abbreviations = ["IP", "UI"];
 
 	data.forEach(e => {
-        	if(!e.name.match(/theaurange/i) && e !== "manga-plus_tracker"){
+        	if(!e.name.match(/theaurange/i) && e.name !== "manga-plus_tracker"){
 			let tempTitle = document.createElement("span"),
 			    tempButton = document.createElement("button"),
 			    tempA = document.createElement("a"),
