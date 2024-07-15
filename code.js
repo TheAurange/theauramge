@@ -14,17 +14,18 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 		"Accept": "application/vnd.github.v3+json"
 	}
 }).then(res => res.json()).then(data => {
-	let abbreviations = ["IP", "UI"];
-
 	data.forEach(e => {
         	if(!e.name.match(/theaurange/i)){
 			let tempTitle = document.createElement("span"),
+			    tempType = document.createElement("span"),
 			    tempButton = document.createElement("button"),
 			    tempA = document.createElement("a"),
 			    tempElem = document.createElement("div");
 
 			tempTitle.classList.add("itemTitle");
-			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace(new RegExp(`(?:^|\\s)(${abbreviations.join("|")})(?:\\s|$)`, "gi"), w => w.toUpperCase()).replace("Livechart", "LiveChart").replace("Gmail", "GMail");
+			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("Gmail", "GMail");
+
+			tempType.innerText = (e.topics.indexOf("userscript") === -1) ? ` ${String.fromCodePoint(0x1F4A1)}` : ` ${String.fromCodePoint(0x1F435)}`;
 
 			tempButton.innerText = "Repo";
 
@@ -33,10 +34,9 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 			tempA.append(tempButton);
 
 			tempElem.classList.add("item");
-			tempElem.append(tempTitle, document.createElement("br"), document.createElement("br"), e.description, document.createElement("br"), document.createElement("br"), tempA);
+			tempElem.append(tempTitle, tempType, document.createElement("br"), document.createElement("br"), e.description, document.createElement("br"), document.createElement("br"), tempA);
 
-            		if(e.topics.indexOf("userscript") === -1) document.querySelector("#projects > .itemWrap").append(tempElem);
-            		else document.querySelector("#userscripts > .itemWrap").append(tempElem);
+			document.querySelector("section#wrap").append(tempElem);
         	}
 	});
 });
