@@ -2,4 +2,4 @@
 My homepage.  
 Author: Aurange
 
-[Interactive Version](https://theaurange.github.io/theaurange.github.io/)
+[Interactive Version](https://theaurange.github.io/)
