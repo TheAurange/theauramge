@@ -10,8 +10,11 @@ body {
 section#wrap {
 	display: flex;
 	margin: 10px;
+	height: calc(100% - 50px);
 	flex-wrap: wrap;
+	align-content: flex-start;
 	gap: 10px;
+	overflow-y: auto;
 }
 
 section#wrap > div.item {
