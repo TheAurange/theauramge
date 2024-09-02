@@ -18,29 +18,26 @@ section#wrap {
 	overflow-y: auto;
 }
 
-section#wrap > div.item {
+section#wrap > a {
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+
+section#wrap > a > div.item {
 	background-color: rgb(254, 251, 234);
-	width: 360px;
-	height: 180px;
+	width: 350px;
+	height: 125px;
 	box-sizing: border-box;
 	border-radius: 20px;
 	padding: 20px;
 }
 
-section#wrap > div.item:hover {
+section#wrap > a > div.item:hover {
 	outline: 5px solid rgb(218, 165, 32);
 }
 
-section#wrap > div.item > span.itemTitle {
+section#wrap > a > div.item > span.itemTitle {
 	font-style: italic;
-}
-
-section#wrap > div.item > a > button {
-	background-color: rgb(190, 218, 247);
-	border-color: rgb(22, 102, 186);
-	border-width: 2px;
-	border-radius: 10px;
-	cursor: pointer;
 }
 
 footer {
