@@ -18,16 +18,18 @@ fetch("https://api.github.com/users/TheAurange/repos", {
         	if(!e.name.match(/theaurange/i)){
 			let tempTitle = document.createElement("span"),
 			    tempType = document.createElement("span"),
+			    tempP = document.createElement("p"),
 			    tempElem = document.createElement("div"),
 			    tempA = document.createElement("a");
 
-			tempTitle.classList.add("itemTitle");
 			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("Gmail", "GMail");
 
 			tempType.innerText = (e.topics.indexOf("userscript") === -1) ? ` ${String.fromCodePoint(0x1F4A1)}` : ` ${String.fromCodePoint(0x1F435)}`;
 
+			tempP.append(tempTitle, tempType);
+
 			tempElem.classList.add("item");
-			tempElem.append(tempTitle, tempType, document.createElement("br"), document.createElement("br"), e.description);
+			tempElem.append(tempP, e.description);
 
 			tempA.href = e.html_url + "/";
 			tempA.target = "_blank";
