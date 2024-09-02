@@ -24,7 +24,7 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 
 			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("Gmail", "GMail");
 
-			tempType.innerText = (e.topics.indexOf("userscript") === -1) ? ` ${String.fromCodePoint(0x1F4A1)}` : ` ${String.fromCodePoint(0x1F435)}`;
+			tempType.innerText = (e.topics.indexOf("userscript") === -1) ? `${String.fromCodePoint(0x1F4A1)}` : `${String.fromCodePoint(0x1F435)}`;
 
 			tempP.append(tempTitle, tempType);
 
