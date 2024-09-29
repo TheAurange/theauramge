@@ -16,11 +16,11 @@ fetch("https://api.github.com/users/TheAurange/repos", {
 }).then(res => res.json()).then(data => {
 	data.forEach(e => {
         	if(!e.name.match(/theaurange/i)){
-			let tempTitle = document.createElement("span"),
+			let tempTitle = document.createElement("p"),
 			    tempElem = document.createElement("div"),
 			    tempA = document.createElement("a");
 
-			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase()).replace("Gmail", "GMail");
+			tempTitle.innerText = e.name.replace(/-/g, " ").replace(/(^\w)|(\s\w)/g, l => l.toUpperCase());
 
 			tempElem.classList.add("item");
 			tempElem.append(tempTitle, e.description);
