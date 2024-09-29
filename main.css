@@ -39,24 +39,10 @@ section#wrap > a > div.item:hover {
 }
 
 section#wrap > a > div.item > p {
+	background-color: rgb(174, 171, 154);
 	margin-top: 0px;
 	margin-bottom: 20px;
 	text-align: center;
-}
-
-section#wrap > a > div.item > p > span {
-	background-color: rgb(174, 171, 154);
-	padding: 10px;
-	border-radius: 20px;
-	box-sizing: border-box;
-}
-
-section#wrap > a > div.item > p > span:first-of-type {
-	margin-right: 2px;
-}
-
-section#wrap > a > div.item > p > span:last-of-type {
-	margin-left: 2px;
 }
 
 footer {
